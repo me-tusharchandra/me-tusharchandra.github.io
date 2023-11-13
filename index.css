@@ -226,3 +226,17 @@ body {
   border-radius: 50%;
 }
 
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .landing {
+      text-align: center;
+  }
+  .landing h1 {
+      font-size: 2rem;
+  }
+  .landing p {
+      font-size: 1rem;
+  }
+  /* Add more styles for smaller screens as needed */
+}

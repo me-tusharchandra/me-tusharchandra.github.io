@@ -20,6 +20,7 @@ h6 {
 }
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 body {
   color: #777777;
@@ -28,6 +29,9 @@ body {
   font-weight: 400;
   line-height: 1.625em;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 .navbar-nav .nav-link {
@@ -269,4 +273,334 @@ body {
   bottom:32px;
   pointer-events: auto;
   opacity:1;
+}
+
+/* Base responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Typography adjustments */
+  h1.display-1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  h1.display-4 {
+    font-size: 1.5rem !important;
+    margin-top: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  h3, h4 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Body text */
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.5;
+  }
+  
+  .lead {
+    font-size: 0.95rem !important;
+    line-height: 1.4;
+  }
+  
+  /* Navigation adjustments */
+  .navbar {
+    padding: 0.5rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  
+  /* Landing section adjustments */
+  .landing {
+    padding: 2rem 0;
+  }
+  
+  .vertical-center {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  /* Profile image adjustments */
+  .rounded-circle {
+    max-width: 150px;
+    margin: 1rem auto;
+  }
+  
+  /* Tech stack grid adjustments */
+  .interests .icon-box {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .icon-box h3 {
+    font-size: 16px;
+  }
+  
+  /* Social links adjustments */
+  .social-links {
+    text-align: center;
+  }
+  
+  .social-links li a {
+    height: 35px;
+    width: 35px;
+    margin: 0 3px;
+  }
+  
+  .social-links li a ion-icon {
+    font-size: 20px;
+  }
+  
+  /* Section spacing */
+  section {
+    padding: 2rem 0;
+  }
+  
+  /* Background text adjustments */
+  .bg-text {
+    display: none;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1.display-1 {
+    font-size: 3rem !important;
+  }
+  
+  h1.display-4 {
+    font-size: 2.25rem !important;
+  }
+  
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .rounded-circle {
+    max-width: 200px;
+  }
+}
+
+/* Ensure smooth scrolling works on iOS */
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for sticky hover on mobile */
+@media (hover: none) {
+  .icon-box:hover,
+  .nav-link:hover,
+  .social-links li a:hover {
+    transform: none;
+  }
+}
+
+/* Improve scroll to top button */
+.to-top {
+  bottom: 1rem;
+  right: 1rem;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Fix for content overflow */
+.container {
+  overflow-x: hidden;
+}
+
+/* Improve text readability on mobile */
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Tech stack grid layout */
+@media (max-width: 768px) {
+  .interests .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .interests .col-lg-3 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .interests .icon-box {
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0.75rem;
+  }
+
+  .interests .icon-box h3 {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .interests .icon-box img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Font size consistency */
+  h1.display-1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+
+  h1.display-4 {
+    font-size: 2rem !important;
+    margin-top: 2rem;
+  }
+
+  h2, h3, h4 {
+    font-size: 1.5rem !important;
+  }
+
+  p, .lead {
+    font-size: 1rem !important;
+    line-height: 1.6;
+  }
+
+  .date {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Navbar toggle button positioning */
+.navbar .container-fluid {
+  padding: 0;
+}
+
+.navbar-toggler {
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Update mobile styles */
+@media (max-width: 768px) {
+  /* Center name and title */
+  .landing .col-lg-8.text-left {
+    text-align: center !important;
+  }
+  
+  .landing .lead.pl-2 {
+    padding-left: 0 !important;
+    text-align: center;
+  }
+  
+  /* Increase profile image size */
+  .rounded-circle {
+    max-width: 200px !important;
+    margin: 1rem auto;
+  }
+  
+  /* Adjust tech stack icon sizes */
+  .interests .icon-box {
+    padding: 0.5rem;
+  }
+  
+  .interests .icon-box img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .interests .icon-box h3 {
+    font-size: 13px;
+    margin-left: 6px;
+  }
+}
+
+/* Ensure desktop styles remain unchanged */
+@media (min-width: 769px) {
+  .interests .icon-box {
+    padding: 20px;
+  }
+  
+  .interests .icon-box img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .interests .icon-box h3 {
+    font-size: 20px;
+    margin-left: 8px;
+  }
+}
+
+/* Update mobile typography */
+@media (max-width: 768px) {
+  /* Headings */
+  h1.display-1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  h1.display-4 {
+    font-size: 1.5rem !important;
+    margin-top: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  h3, h4 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Body text */
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.5;
+  }
+  
+  .lead {
+    font-size: 0.95rem !important;
+    line-height: 1.4;
+  }
+  
+  /* Tech stack */
+  .interests .icon-box h3 {
+    font-size: 0.85rem;
+    margin-left: 6px;
+  }
+  
+  /* Dates and metadata */
+  .date {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    font-size: 0.9rem;
+  }
 }

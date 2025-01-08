@@ -12,26 +12,45 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Handle navbar toggler click using Bootstrap's collapse
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Use Bootstrap's collapse method
+            $(navbarCollapse).collapse('toggle');
+        });
+
+        // Handle Bootstrap collapse events
+        $(navbarCollapse).on('show.bs.collapse', function () {
+            navbarToggler.classList.remove('collapsed');
+            navbarToggler.setAttribute('aria-expanded', 'true');
+        });
+
+        $(navbarCollapse).on('hide.bs.collapse', function () {
+            navbarToggler.classList.add('collapsed');
+            navbarToggler.setAttribute('aria-expanded', 'false');
+        });
+    }
+
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        
-        if (navbarCollapse.classList.contains('show') && 
+        if (navbarCollapse && navbarCollapse.classList.contains('show') && 
             !navbarCollapse.contains(e.target) && 
             !navbarToggler.contains(e.target)) {
-            navbarCollapse.classList.remove('show');
+            $(navbarCollapse).collapse('hide');
         }
     });
 
     // Close mobile menu when clicking nav links
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-                // Trigger the toggler button state change
-                document.querySelector('.navbar-toggler').classList.add('collapsed');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                $(navbarCollapse).collapse('hide');
             }
         });
     });

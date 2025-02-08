@@ -32,6 +32,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  z-index: 1;
 }
 
 .navbar-nav .nav-link {
@@ -473,6 +474,8 @@ html {
 /* Fix for content overflow */
 .container {
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 /* Improve text readability on mobile */
@@ -648,4 +651,74 @@ body {
   .nav-link {
     font-size: 0.9rem;
   }
+}
+
+.navbar {
+    margin-bottom: 40px;
+    text-transform: lowercase;
+    font-size: 15px;
+    padding: 1rem 0;
+}
+
+.navbar .nav-link {
+    color: #333 !important;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 0.5rem 0;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline !important;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar .nav-link {
+        margin: 5px 0;
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #333;
+    text-transform: lowercase;
+    margin: 5px 0;
+}
+
+.rounded-custom {
+    border-radius: 25px;
+}
+
+.shadow-effect {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.shadow-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Keep these general styles */
+body {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
 }

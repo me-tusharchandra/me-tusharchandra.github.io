@@ -1,5 +1,7 @@
 // Add smooth scrolling initialization
 document.addEventListener("DOMContentLoaded", function() {
+    console.log('Script loaded'); // Debug log
+
     // Initialize Locomotive Scroll
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),

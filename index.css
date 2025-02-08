@@ -722,3 +722,79 @@ body {
     position: relative;
     z-index: 1;
 }
+
+.carousel {
+    margin-bottom: 0;
+    height: 400px;
+}
+
+.carousel-inner {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-item {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.carousel-item img {
+    max-height: 90%;
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform .6s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #868686;
+    border-radius: 50%;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    opacity: 1;
+}
+
+.carousel-indicators li {
+    background-color: #868686;
+    opacity: 0.8;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-caption {
+    position: static;
+    color: #777777;
+    padding: 3px 0;
+    text-align: center;
+    font-style: italic;
+
+}
+
+.team-caption {
+    color: #868686;
+    font-style: italic;
+    font-size: 1.1em;
+    padding: 3px 0;
+    margin: 0 0 20px 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+/* Adjust spacing for the Hackathons section */
+.desc h5 {
+    margin-top: 0;
+}

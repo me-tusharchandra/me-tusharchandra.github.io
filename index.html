@@ -40,9 +40,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#education">education</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="https://drive.google.com/file/d/1olOBV2etW1R0qPjU4EcVAYkkCdQ_ORoS/view?usp=sharing" target="_blank">résumé</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">projects</a>
                     </li>
@@ -214,44 +214,89 @@
 
         <section id="awards">
             <h1 class="display-4 mt-5">Achievements</h4>
-                <h1 class="bold-text bg-text">awards</h1>
-                <div class="py-4">
-                    <div class="desc">
-                        <h5>Hackathons</h5>
-                        <ul>
-                            <li>Secured <a target="_blank" href="https://drive.google.com/file/d/1310W3bo3OSvX4rah1S0t-XxBwwmOX1zO/view?usp=sharing"><strong>1st</strong></a> position in <strong>Neutron Hackathon</strong> and a cash prize of Rs. 50,000/-. <span style="color: #868686; font-style: italic;">(21, April, 2024)</span></li>
-                            
-                            <li> <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7098270578733662209?utm_source=share&utm_medium=member_desktop">Won </a> the <strong>Best Design Award</strong> at <strong>Red Brick Hacks</strong> held in Ashoka University. <span style="color: #868686; font-style: italic;">(19, September, 2023)</span></li>
-                            
-                            <li> <a target="_blank" href="https://www.linkedin.com/posts/varsha-bhaskar-133106228_hackathon-innovation-teamwork-ugcPost-7109488476684730368-_6aR?utm_source=share&utm_medium=member_desktop">Won </a> the <strong>Best AI Hack Title</strong> at <strong>HackAIthon</strong> held in Shri Ram Group, Jabalpur. <span style="color: #868686; font-style: italic;">(14, August, 2023)</span></li>
+            <h1 class="bold-text bg-text">awards</h1>
+            
+            <!-- Replace the previous gallery with this carousel -->
+            <div id="hackathonCarousel" class="carousel slide mt-4" data-ride="carousel" data-interval="6000">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#hackathonCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#hackathonCarousel" data-slide-to="1"></li>
+                    <li data-target="#hackathonCarousel" data-slide-to="2"></li>
+                    <li data-target="#hackathonCarousel" data-slide-to="3"></li>
+                </ol>
 
-                            <li> <a target="_blank" href="https://drive.google.com/file/d/1nwLUcKf0GS4H6gaLpkbmSSci3jVBkLGR/view">1st </a> Runner up of <strong>Green India Hackathon</strong>, won a cash prize of Rs. 10,000/- and an Electric cycle worth Rs. 40,000/-. <span style="color: #868686; font-style: italic;">(4, Feb, 2023)</span> </li>
-
-                            <li> <a target="_blank" href="https://drive.google.com/file/d/1WBVyvFCTOnex_7uNd-Xg-grLL-8YW9WY/view"><strong>2nd</strong></a> Runner up of <strong>India's Biggest EV Hackathon</strong>, <strong>DecodEV</strong>, won a cash prize of Rs. 50,000/- and recognition in The Parliamentary Magazine, October. <span style="color: #868686; font-style: italic;">(11, September, 2022)</span></li>
-                        </ul>
-
-                        <h5>Volunteering</h5>
-                        <ul>
-                            <li><strong>Volunteered</strong> at <strong>India's first-ever EA Global</strong> Conference in Jaipur, and am a part of the EA community. <span style="color: #868686; font-style: italic;">(January, 2023)</span></li>
-                            
-                            <li><strong>Core Team Member</strong> at <strong>Young Changemakers Bootcamp'23</strong> held at <strong>IIT-Delhi</strong>, a 5-day event in which we mentored 50 students from all over Indian participated.</li>
-                        </ul>
-
-                        <h5>Speaking & Conferences</h5>
-                        <ul>
-                            <li><a target="_blank" href="https://drive.google.com/file/d/1JWGeSq4di9d13HRfkBkLcF8uERztZcSU/view">Conference Delegate </a> at <strong>Harvard's College Project for Asians & International Relations (HPAIR'23)</strong> Hong Kong, China. </li>
-                            
-                            <li><a target="_blank" href="https://www.linkedin.com/in/me-tusharchandra/details/volunteering-experiences/">Speaker </a> at <strong>Young Changemakers Bootcamp'23</strong> held at <strong>IIT-Delhi</strong>, delivered a talk on "The Art of Storytelling".</li>
-                        </ul>
-
-                        <h5>Other Achievements</h5>
-                        <ul>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/me-tusharchandra/details/education/">Attended</a> the 9th edition of <strong>NCBS's annual monsoon school, Physics of Life</strong>. A 10-day, in-person research symposium exploring biology through the lens of physics. Exploring: Non-Linear Dynamic System, Active Matter, Flocking of Birds, Science Communication (SciComm), Development of Inner Ear in Chicken Embryo, Marine Particles & Planktons, etc. <span style="color: #868686; font-style: italic;">(July, 2024)</span></li>
-
-                            <li> <a target="_blank" href="https://drive.google.com/file/d/1dz3f6nWTLrWw_WqnW4bFYxDZ3hA6NrTi/view"> <strong>Semi-Finalist</strong> </a> in <strong>Battle of Bands</strong> of Asia's biggest cultural event, Mood Indigo, held at IIT Bombay. <span style="color: #868686; font-style: italic;">(December, 2022)</span> </li>
-                        </ul>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-50 mx-auto rounded-custom shadow-effect" src="Media/w1.jpg" alt="Hackathon 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-50 mx-auto rounded-custom shadow-effect" src="Media/w2.jpg" alt="Hackathon 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-50 mx-auto rounded-custom shadow-effect" src="Media/w3.jpg" alt="Hackathon 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-50 mx-auto rounded-custom shadow-effect" src="Media/w4.jpg" alt="Hackathon 4">
                     </div>
                 </div>
+
+                <!-- Carousel controls -->
+                <a class="carousel-control-prev" href="#hackathonCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#hackathonCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!-- Add this separate div for the caption -->
+            <div class="team-caption text-center mb-4">
+                Team: Spambots <3
+            </div>
+
+            <div class="py-4">
+                <div class="desc">
+                    <h5>Hackathons</h5>
+                    <ul>
+                        <li><a target="_blank" href="https://www.linkedin.com/posts/iiit-delhi_iiitd-studentachievement-hackathon-activity-7290570154109784064-hllW?utm_source=share&utm_medium=member_desktop"><strong>1st</strong></a> position in <strong>6th Technovation Hackathon</strong> held at Sharda University under the theme of <strong>Best use of AI in Banking (BUAB), </strong> and a cash prize of Rs. 25,000/-. <span style="color: #868686; font-style: italic;">(26, Jan, 2025)</span></li>
+
+                        <li><a target="_blank" href="https://drive.google.com/file/d/1310W3bo3OSvX4rah1S0t-XxBwwmOX1zO/view?usp=sharing"><strong>1st</strong></a> position in <strong>Neutron Hackathon</strong> and a cash prize of Rs. 50,000/-. <span style="color: #868686; font-style: italic;">(21, April, 2024)</span></li>
+                        
+                        <li> <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7098270578733662209?utm_source=share&utm_medium=member_desktop">Won </a> the <strong>Best Design Award</strong> at <strong>Red Brick Hacks</strong> held in Ashoka University. <span style="color: #868686; font-style: italic;">(19, September, 2023)</span></li>
+                        
+                        <li> <a target="_blank" href="https://www.linkedin.com/posts/varsha-bhaskar-133106228_hackathon-innovation-teamwork-ugcPost-7109488476684730368-_6aR?utm_source=share&utm_medium=member_desktop">Won </a> the <strong>Best AI Hack Title</strong> at <strong>HackAIthon</strong> held in Shri Ram Group, Jabalpur. <span style="color: #868686; font-style: italic;">(14, August, 2023)</span></li>
+
+                        <li> <a target="_blank" href="https://drive.google.com/file/d/1nwLUcKf0GS4H6gaLpkbmSSci3jVBkLGR/view">1st </a> Runner up of <strong>Green India Hackathon</strong>, won a cash prize of Rs. 10,000/- and an Electric cycle worth Rs. 40,000/-. <span style="color: #868686; font-style: italic;">(4, Feb, 2023)</span> </li>
+
+                        <li> <a target="_blank" href="https://drive.google.com/file/d/1WBVyvFCTOnex_7uNd-Xg-grLL-8YW9WY/view"><strong>2nd</strong></a> Runner up of <strong>India's Biggest EV Hackathon</strong>, <strong>DecodEV</strong>, won a cash prize of Rs. 50,000/- and recognition in The Parliamentary Magazine, October. <span style="color: #868686; font-style: italic;">(11, September, 2022)</span></li>
+                    </ul>
+
+                    <h5>Volunteering</h5>
+                    <ul>
+                        <li><strong>Volunteered</strong> at <strong>India's first-ever EA Global</strong> Conference in Jaipur, and am a part of the EA community. <span style="color: #868686; font-style: italic;">(January, 2023)</span></li>
+                        
+                        <li><strong>Core Team Member</strong> at <strong>Young Changemakers Bootcamp'23</strong> held at <strong>IIT-Delhi</strong>, a 5-day event in which we mentored 50 students from all over Indian participated.</li>
+                    </ul>
+
+                    <h5>Speaking & Conferences</h5>
+                    <ul>
+                        <li><a target="_blank" href="https://drive.google.com/file/d/1JWGeSq4di9d13HRfkBkLcF8uERztZcSU/view">Conference Delegate </a> at <strong>Harvard's College Project for Asians & International Relations (HPAIR'23)</strong> Hong Kong, China. </li>
+                        
+                        <li><a target="_blank" href="https://www.linkedin.com/in/me-tusharchandra/details/volunteering-experiences/">Speaker </a> at <strong>Young Changemakers Bootcamp'23</strong> held at <strong>IIT-Delhi</strong>, delivered a talk on "The Art of Storytelling".</li>
+                    </ul>
+
+                    <h5>Other Achievements</h5>
+                    <ul>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/me-tusharchandra/details/education/">Attended</a> the 9th edition of <strong>NCBS's annual monsoon school, Physics of Life</strong>. A 10-day, in-person research symposium exploring biology through the lens of physics. Exploring: Non-Linear Dynamic System, Active Matter, Flocking of Birds, Science Communication (SciComm), Development of Inner Ear in Chicken Embryo, Marine Particles & Planktons, etc. <span style="color: #868686; font-style: italic;">(July, 2024)</span></li>
+
+                        <li> <a target="_blank" href="https://drive.google.com/file/d/1dz3f6nWTLrWw_WqnW4bFYxDZ3hA6NrTi/view"> <strong>Semi-Finalist</strong> </a> in <strong>Battle of Bands</strong> of Asia's biggest cultural event, Mood Indigo, held at IIT Bombay. <span style="color: #868686; font-style: italic;">(December, 2022)</span> </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="contact">

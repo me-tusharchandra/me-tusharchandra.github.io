@@ -726,26 +726,27 @@ body {
 .carousel {
     margin-bottom: 0;
     height: 400px;
+    width: 100%;
 }
 
 .carousel-inner {
     position: relative;
     height: 100%;
+    width: 100%;
 }
 
 .carousel-item {
-    height: 400px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0;
+    align-items: center;
+    height: auto; /* Allow the height to adjust based on the image */
 }
 
 .carousel-item img {
-    max-height: 90%;
     max-width: 100%;
-    object-fit: cover;
-    transition: transform .6s ease-in-out;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .carousel-control-prev,
@@ -781,20 +782,187 @@ body {
     padding: 3px 0;
     text-align: center;
     font-style: italic;
-
 }
 
 .team-caption {
-    color: #868686;
-    font-style: italic;
-    font-size: 1.1em;
-    padding: 3px 0;
-    margin: 0 0 20px 0;
-    background-color: transparent;
     text-align: center;
+    margin-top: 10px; /* Adjust margin as needed */
 }
 
 /* Adjust spacing for the Hackathons section */
 .desc h5 {
     margin-top: 0;
+}
+
+/* First, keep all existing carousel styles */
+/* Then add these responsive adjustments */
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 300px;
+  }
+  
+  .carousel-item {
+    height: 300px;
+  }
+  
+  .carousel-item img {
+    width: 80%;  /* Wider images on mobile */
+  }
+  
+  /* Improve carousel controls for mobile */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15%; /* Wider touch targets */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 15px; /* Slightly smaller icons */
+  }
+}
+
+/* Base responsive styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Typography adjustments */
+  h1.display-1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+  
+  h1.display-4 {
+    font-size: 1.5rem !important;
+    margin-top: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  h3, h4 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Body text */
+  p {
+    font-size: 0.9rem !important;
+    line-height: 1.5;
+  }
+  
+  .lead {
+    font-size: 0.95rem !important;
+    line-height: 1.4;
+  }
+  
+  /* Section spacing */
+  section {
+    padding: 2rem 0;
+  }
+  
+  /* Consistent margins for all sections */
+  .section-heading {
+    margin-bottom: 1.5rem;
+  }
+  
+  .py-4 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+  }
+  
+  .mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* List spacing */
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Date styling */
+  .date {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Team caption responsive */
+  .team-caption {
+    font-size: 0.9em;
+    padding: 3px 0;
+    margin: 5px 0 15px 0;
+  }
+}
+
+/* Ensure smooth scrolling works on iOS */
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for content overflow */
+.container {
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Improve text readability on mobile */
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .team-caption {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Set a fixed height for desktop */
+  }
+
+  .carousel-item img {
+    max-height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .team-caption {
+    text-align: center;
+    margin-top: 10px;
+  }
 }

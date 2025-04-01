@@ -57,10 +57,16 @@ body {
   color: #111;
   transition: all 0.3s;
 }
+.social-links {
+  margin: 20px 0;
+}
+
 .social-links li {
   list-style: none;
   display: inline-block;
+  margin: 0 10px;
 }
+
 .social-links li a {
   height: 50px;
   width: 50px;
@@ -70,21 +76,25 @@ body {
   border-radius: 50%;
   position: relative;
 }
-.social-links li a ion-icon {
+
+.social-links li a i {
   position: absolute;
-  font-size: 26px;
+  font-size: 28px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   transition: all 0.3s;
-}
-.social-links li a:hover {
-  color: #111;
-  transition: all 0.3s;
+  color: #333;
 }
 
+.social-links li a:hover i {
+  color: #666;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Tooltip styling */
 .social-links li a::before {
   content: attr(data-tooltip);
   position: absolute;
@@ -109,35 +119,42 @@ body {
   visibility: visible;
 }
 
-/* Add a small arrow to the tooltip */
-.social-links li a::after {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  margin-bottom: -5px;
-}
+/* Mobile responsiveness for social links */
+@media (max-width: 768px) {
+  .social-links li {
+    margin: 0 8px;
+  }
 
-.social-links li a:hover::after {
-  opacity: 1;
-  visibility: visible;
+  .social-links li a {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .social-links li a i {
+    font-size: 24px;
+  }
 }
 
 .wrap {
   padding: 0;
 }
-@media (max-width: 767.98px) {
-  .wrap {
-    margin-top: 40px;
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .social-links li a {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .social-links li a i {
+    font-size: 24px;
+  }
+  
+  .social-links li {
+    margin: 0 8px;
   }
 }
+
 @media (min-width: 768px) {
   .wrap .about-desc {
     position: relative;
